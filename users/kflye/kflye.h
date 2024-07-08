@@ -28,7 +28,8 @@ enum {
     TD_EECLEAR,
     TD_BASE,
     TD_ALT,
-    TD_GAMING
+    TD_GAMING,
+    TD_RBT
 };
 
 enum unicode_names {
