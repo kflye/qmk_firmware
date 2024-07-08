@@ -51,26 +51,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
 
     uprintf("KL: layer(%s) kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", A, keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
-  #endif 
-  
+  #endif
+
   switch (keycode) {
     case VRSN:
         SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
         return false;
-    case U_BASE: 
+    case U_BASE:
         default_layer_set((layer_state_t)1 << _BASE);
-        return false; 
-    case U_ALT: 
+        return false;
+    case U_ALT:
         default_layer_set((layer_state_t)1 << _ALT);
-        return false;   
-    case U_GAMING: 
+        return false;
+    case U_GAMING:
         default_layer_set((layer_state_t)1 << _GAMING);
-        return false;  
+        return false;
     case SHRUG:
         if (record->event.pressed) {
             send_unicode_string("¯\\_(ツ)_/¯");
         }
-        return false;  
+        return false;
   }
   return process_record_keymap(keycode, record);
 }
@@ -80,6 +80,12 @@ __attribute__((weak)) void matrix_scan_keymap(void) {}
 void fn_boot(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
     reset_keyboard();
+  }
+}
+
+void fn_reboot(tap_dance_state_t *state, void *user_data) {
+  if (state->count == 2) {
+    soft_reset_keyboard();
   }
 }
 
@@ -114,6 +120,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_ALT] = ACTION_TAP_DANCE_FN(fn_alt),
     [TD_GAMING] = ACTION_TAP_DANCE_FN(fn_gaming),
     [TD_EECLEAR] = ACTION_TAP_DANCE_FN(fn_eeclear),
+    [TD_RBT] = ACTION_TAP_DANCE_FN(fn_reboot),
 };
 
 #ifdef TAPPING_TERM_PER_KEY
