@@ -41,14 +41,14 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define _________________DVORAK_R2__________________    KC_D,              KC_H,              KC_T,              KC_N,              KC_S,              KC_RCTL
 #define _________________DVORAK_R3__________________    KC_B,              KC_M,              KC_W,              KC_V,              KC_Z,              KC_RSFT
 
-#define _________________GAMING_L1__________________    KC_TAB,            KC_Q,              KC_W,              KC_F,              KC_P,              KC_B
-#define _________________GAMING_L2__________________    KC_LCTL,           KC_A,              KC_R,              KC_S,              KC_T,              KC_G
-#define _________________GAMING_L3__________________    KC_LSFT,           KC_Z,              KC_X,              KC_C,              KC_D,              KC_V
+#define _________________GAMING_L1__________________    KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R,              KC_T 
+#define _________________GAMING_L2__________________    KC_LCTL,           KC_A,              KC_S,              KC_D,              KC_F,              KC_G 
+#define _________________GAMING_L3__________________    KC_LSFT,           KC_Z,              KC_X,              KC_C,              KC_V,              KC_B 
 #define _________________GAMING_L4__________________    _______,           _______,           _______,           GAM_WIN,           KC_LALT,           KC_SPC
 
-#define _________________GAMING_R1__________________    KC_J,              KC_L,              KC_U,              KC_Y,              KC_SCLN,           KC_BSPC
-#define _________________GAMING_R2__________________    KC_M,              KC_N,              KC_E,              KC_I,              KC_O,              KC_RCTL
-#define _________________GAMING_R3__________________    KC_K,              KC_H,              KC_COMM,           KC_DOT,            KC_SLASH,          KC_RSFT
+#define _________________GAMING_R1__________________    KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              KC_BSPC 
+#define _________________GAMING_R2__________________    KC_H,              KC_J,              KC_K,              KC_L,              KC_SCLN,           KC_RCTL 
+#define _________________GAMING_R3__________________    KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLASH,          KC_RSFT 
 #define _________________GAMING_R4__________________    _________________THUMB_RIGHT_______________
 
 #define ___________________SYM_L1___________________    _______,           KC_QUOT,           KC_LABK,           KC_RABK,           KC_DQUO,           KC_GRV
