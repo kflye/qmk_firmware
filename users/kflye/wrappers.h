@@ -70,8 +70,8 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define ___________________NUM_L4___________________    _______,           _______,           _______,           _______,           _______,           _______
 
 #define ___________________NUM_R1___________________    _______,           _______,           _______,           _______,           _______,           _______
-#define ___________________NUM_R2___________________    KC_NO,             KC_AE,             KC_OE,             KC_AA,             _______,           _______
-#define ___________________NUM_R3___________________    TD(TD_BASE),       TD(TD_GAMING),     TD(TD_ALT),        TD(TD_EECLEAR),    TD(TD_BOOT),       TD(TD_RBT)
+#define ___________________NUM_R2___________________    TD(TD_RBT),        KC_AE,             KC_OE,             KC_AA,             _______,           _______
+#define ___________________NUM_R3___________________    TD(TD_BASE),       TD(TD_GAMING),     TD(TD_ALT),        TD(TD_EECLEAR),    TD(TD_BOOT),       _______
 #define ___________________NUM_R4___________________    _______,           _______,           _______,           _______,           _______,           _______
 
 #define ___________________FUN_L1___________________    _______,           KC_F12,            KC_F7,             KC_F8,             KC_F9,             KC_PSCR
