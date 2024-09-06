@@ -41,15 +41,15 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define _________________DVORAK_R2__________________    KC_D,              KC_H,              KC_T,              KC_N,              KC_S,              KC_RCTL
 #define _________________DVORAK_R3__________________    KC_B,              KC_M,              KC_W,              KC_V,              KC_Z,              KC_RSFT
 
-#define _________________GAMING_L1__________________    KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R,              KC_T 
-#define _________________GAMING_L2__________________    KC_LCTL,           KC_A,              KC_S,              KC_D,              KC_F,              KC_G 
-#define _________________GAMING_L3__________________    KC_LSFT,           KC_Z,              KC_X,              KC_C,              KC_V,              KC_B 
+#define _________________GAMING_L1__________________    KC_TAB,            KC_Q,              KC_W,              KC_F,              KC_P,              KC_B 
+#define _________________GAMING_L2__________________    KC_LCTL,           KC_A,              KC_R,              KC_S,              KC_T,              KC_G 
+#define _________________GAMING_L3__________________    KC_LSFT,           KC_Z,              KC_X,              KC_C,              KC_D,              KC_V 
 #define _________________GAMING_L4__________________    _______,           _______,           _______,           GAM_WIN,           KC_LALT,           KC_SPC
 
-#define _________________GAMING_R1__________________    KC_Y,              KC_U,              KC_I,              KC_O,              KC_P,              KC_BSPC 
-#define _________________GAMING_R2__________________    KC_H,              KC_J,              KC_K,              KC_L,              KC_SCLN,           KC_RCTL 
-#define _________________GAMING_R3__________________    KC_N,              KC_M,              KC_COMM,           KC_DOT,            KC_SLASH,          KC_RSFT 
-#define _________________GAMING_R4__________________    _________________THUMB_RIGHT_______________
+#define _________________GAMING_R1__________________    KC_J,              KC_L,              KC_U,              KC_Y,              KC_SCLN,           KC_BSPC
+#define _________________GAMING_R2__________________    KC_M,              KC_N,              KC_E,              KC_I,              KC_O,              KC_RCTL
+#define _________________GAMING_R3__________________    KC_K,              KC_H,              KC_COMM,           KC_DOT,            KC_SLASH,          KC_RSFT
+#define _________________GAMING_R4__________________    _________________THUMB_RIGHT________________
 
 #define ___________________SYM_L1___________________    _______,           KC_QUOT,           KC_LABK,           KC_RABK,           KC_DQUO,           KC_GRV
 #define ___________________SYM_L2___________________    _______,           KC_EXLM,           KC_MINS,           KC_PLUS,           KC_EQL,            KC_HASH
@@ -117,11 +117,11 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define __________________MOUSE_R3__________________    KC_BTN1,           KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           _______
 #define __________________MOUSE_R4__________________    _______,           _______,           KC_BTN3,           U_NP,              U_NP   ,           _______
 
-#define ________________NUMBER_LEFT________________     KC_1,              KC_2,              KC_3,              KC_4,              KC_5
-#define ________________NUMBER_RIGHT_______________     KC_6,              KC_7,              KC_8,              KC_9,              KC_0
+#define ________________NUMBER_LEFT_________________    KC_1,              KC_2,              KC_3,              KC_4,              KC_5
+#define ________________NUMBER_RIGHT________________    KC_6,              KC_7,              KC_8,              KC_9,              KC_0
 
-#define _________________THUMB_LEFT________________     KC_NO,             KC_NO,             KC_NO,             KC_LGUI,           LALT_T(KC_ESC),    LT(_NAV,KC_SPC)
-#define _________________THUMB_RIGHT_______________     LT(_SYM,KC_ENT),   LT(_NUM,KC_TAB),   LT(_FUN, KC_RGUI), KC_NO,             KC_NO,             KC_NO
+#define _________________THUMB_LEFT_________________    KC_NO,             KC_NO,             KC_NO,             KC_LGUI,           LALT_T(KC_ESC),    LT(_NAV,KC_SPC)
+#define _________________THUMB_RIGHT________________    LT(_SYM,KC_ENT),   LT(_NUM,KC_TAB),   LT(_FUN, KC_RGUI), KC_NO,             KC_NO,             KC_NO
 
 
 // VI Versions
