@@ -10,7 +10,7 @@
 
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
 
-enum layers { _BASE, _GAMING, _ALT, _SYM, _NUM, _NAV,  _MEDIA, _FUN, _MOUSE  };
+enum layers { _BASE, _GAMING, _ALT, _QWERTY, _SYM, _NUM, _NAV,  _MEDIA, _FUN, _MOUSE  };
 
 enum custom_keycodes {
     VRSN = SAFE_RANGE,
@@ -28,6 +28,7 @@ enum {
     TD_EECLEAR,
     TD_BASE,
     TD_ALT,
+    TD_QWERTY,
     TD_GAMING,
     TD_RBT
 };
@@ -130,5 +131,10 @@ enum unicode_names {
 #define U_CUT C(KC_X)
 #define U_UND C(KC_Z)
 
+#define U_OSX_RDO LGUI(KC_Y)
+#define U_OSX_PST LGUI(KC_V)
+#define U_OSX_CPY LGUI(KC_C)
+#define U_OSX_CUT LGUI(KC_X)
+#define U_OSX_UND LGUI(KC_Z)
 
 #define GAM_WIN LT(_FUN, KC_LGUI)
