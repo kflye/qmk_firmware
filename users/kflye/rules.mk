@@ -1,4 +1,4 @@
-SRC += kflye.c
+INTROSPECTION_KEYMAP_C += kflye.c
 SRC += features/achordion.c
 
 TAP_DANCE_ENABLE = yes
