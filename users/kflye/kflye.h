@@ -3,23 +3,40 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
+#include "semantickeys.h"
 #include "wrappers.h"
 #define XXX  KC_NO
 #define U_NA KC_NO // Present but not available for use.
 #define U_NU KC_NO // Available but not used.
+
+typedef union {
+    uint32_t raw;
+    struct {
+        uint8_t OSIndex; // index of platforms (0=mac, 1=win, 2=lux)? // used by semantickeys
+    };
+} user_config_t; // used for persistent memory of settings (only 16 bytes avail on AVR?)
+
+enum OS_Platform { // Used for platform support via SemKeys
+    OS_Mac,     // Mac with ANSI_US_EXTENDED layout
+    OS_Win,     // Win with default English/ANSI layout?
+#ifdef INCLUDE_SK_Lux
+    OS_Lux,     // Linux (Gnome?/KDE?/Boox Android?)
+#endif
+    OS_count
+};
 
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
 
 enum layers { _BASE, _GAMING, _ALT, _QWERTY, _SYM, _NUM, _NAV,  _MEDIA, _FUN, _MOUSE  };
 
 enum custom_keycodes {
-    VRSN = SAFE_RANGE,
+    VRSN = NEW_SAFE_RANGE,
     U_BASE,
     U_ALT,
     U_GAMING,
      // ascii emojies
     SHRUG,
-    NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
+    NEW_NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
 };
 
 // Tap Dance declarations
