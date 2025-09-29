@@ -14,11 +14,8 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
 
 #define ___________________BLANK___________________     _______,           _______,           _______,           _______,           _______,           _______
-#define ________________CLIPBOARD_L________________     U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO
-#define ________________CLIPBOARD_R________________     U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND
-
-#define ______________CLIPBOARD_OSX_L______________     U_OSX_UND,         U_OSX_CUT,         U_OSX_CPY,         U_OSX_PST,         U_OSX_RDO
-#define ______________CLIPBOARD_OSX_R______________     U_OSX_RDO,         U_OSX_PST,         U_OSX_CPY,         U_OSX_CUT,         U_OSX_UND 
+#define ________________CLIPBOARD_L________________     SK_UNDO,           SK_CUT,            SK_COPY,           SK_PSTE,           SK_REDO 
+#define ________________CLIPBOARD_R________________     SK_REDO,           SK_PSTE,           SK_COPY,           SK_CUT,            SK_UNDO
 
 #define _________________COLEMAK_L1_________________    KC_DEL,            KC_Q,              KC_W,              KC_F,              KC_P,              KC_B
 #define _________________COLEMAK_L2_________________    KC_LCTL,           KC_A,              KC_R,              KC_S,              KC_T,              KC_G
@@ -117,9 +114,9 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define ___________________FUN_L4___________________    _______,           _______,           _______,           _______,           _______,           _______
 // TODO: kc_app
 
-#define ___________________FUN_R1___________________    _______,           _______,           _______,           UC_PREV,           UC_NEXT,           _______
+#define ___________________FUN_R1___________________    SK_Win,            SK_Mac,            _______,           UC_PREV,           UC_NEXT,           _______
 #define ___________________FUN_R2___________________    SHRUG,             _______,           _______,           _______,           _______,           _______
-#define ___________________FUN_R3___________________    _______,           _______,           _______,           _______,           _______,           _______
+#define ___________________FUN_R3___________________    VRSN,              _______,           _______,           _______,           _______,           _______
 #define ___________________FUN_R4___________________    _______,           _______,           _______,           _______,           _______,           _______
 
 #define __________________MEDIA_L1__________________    _______,           _______,           _______,           _______,           _______,           _______
@@ -133,14 +130,12 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define __________________MEDIA_R4__________________    _______,           _______,           _______,           _______,           _______ ,           _______
 
 
-#define ___________________NAV_L1___________________    C(KC_TAB),         ________________CLIPBOARD_L________________
-#define ___________________NAV_OSX_L1_______________    C(KC_TAB),         ______________CLIPBOARD_OSX_L______________
-#define ___________________NAV_L2___________________    _______,           _______,           _______,           KC_LAUNCHPAD,      KC_MISSION_CONTROL, _______
+#define ___________________NAV_L1___________________    SK_DELWDR,         ________________CLIPBOARD_L________________
+#define ___________________NAV_L2___________________    _______,           _______,           KC_LAUNCHPAD,      KC_MISSION_CONTROL,SK_SRCH,           _______
 #define ___________________NAV_L3___________________    _______,           ________________CLIPBOARD_L________________
-#define ___________________NAV_OSX_L3_______________    _______,           ______________CLIPBOARD_OSX_L______________ 
 #define ___________________NAV_L4___________________    _______,           _______,           _______,           _______,           _______,           _______
 
-#define ___________________NAV_R1___________________    ________________CLIPBOARD_R________________, _______
+#define ___________________NAV_R1___________________    ________________CLIPBOARD_R________________,                                                   SK_DELWDL
 #define ___________________NAV_R2___________________    CW_TOGG,           KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           _______
 #define ___________________NAV_R3___________________    KC_INS,            KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END ,           _______
 #define ___________________NAV_R4___________________    _______,           _______,           _______,           _______,           _______,           _______
