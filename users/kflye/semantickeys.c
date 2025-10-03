@@ -1,6 +1,6 @@
 
 const uint16_t SemKeys_t[SK_count][OS_count] = {
-// Mac, Win, 
+// Mac, Win,
 // System-wide controls
 
     [SK_ndx(SK_KILL)] = {LAG(KC_ESC),LCA(KC_DEL)},        // Force quit / ctrl-alt-del
@@ -17,8 +17,10 @@ const uint16_t SemKeys_t[SK_count][OS_count] = {
     [SK_ndx(SK_PSTM)] = {G(S(A(KC_V))),C(S(A(KC_V)))},    // paste_match
     [SK_ndx(SK_SALL)] = {G(KC_A),C(KC_A)},                // select all
     [SK_ndx(SK_CLOZ)] = {G(KC_W),C(KC_W)},                // close
+    [SK_ndx(SK_RELD)] = {G(KC_R),C(KC_R)},                // reload
     [SK_ndx(SK_QUIT)] = {G(KC_Q),C(KC_Q)},                // quit
     [SK_ndx(SK_NEW)]  = {G(KC_N),C(KC_N)},                // new
+    [SK_ndx(SK_NEWTAB)]  = {G(KC_T),C(KC_T)},             // new
     [SK_ndx(SK_OPEN)] = {G(KC_O),C(KC_O)},                // open
     [SK_ndx(SK_FIND)] = {G(KC_F),C(KC_F)},                // find
     [SK_ndx(SK_FAGN)] = {G(KC_G),C(KC_G)},                // find again
@@ -49,14 +51,14 @@ const uint16_t SemKeys_t[SK_count][OS_count] = {
     [SK_ndx(SK_WINNXT)] = {C(KC_TAB),C(KC_TAB)},          // Window/tab switcher Next
     [SK_ndx(SK_WINPRV)] = {C(S(KC_TAB)),C(S(KC_TAB))},    // Window/tab switcher Prev
         // Punctuation & typography
-    [SK_ndx(SK_NDSH)] = {A(KC_MINS),0x8150},              // – N-Dash 
+    [SK_ndx(SK_NDSH)] = {A(KC_MINS),0x8150},              // – N-Dash
     [SK_ndx(SK_MDSH)] = {LSA(KC_MINS),0x8151},            // — M-Dash
-    [SK_ndx(SK_ELPS)] = {A(KC_SCLN),0x8133},              // … 
-    [SK_ndx(SK_SCRS)] = {LSA(KC_5),0x8134},               // † Single Cross 
-    [SK_ndx(SK_DCRS)] = {LSA(KC_7),0x8135},               // ‡ Double Cross 
-    [SK_ndx(SK_BBLT)] = {A(KC_8),0x8149},                 // • Bold Bullet 
-    [SK_ndx(SK_SBLT)] = {LSA(KC_9),0x8183},               // · Small Bullet 
-    [SK_ndx(SK_PARA)] = {A(KC_7),0x8182},                 // ¶ 
+    [SK_ndx(SK_ELPS)] = {A(KC_SCLN),0x8133},              // …
+    [SK_ndx(SK_SCRS)] = {LSA(KC_5),0x8134},               // † Single Cross
+    [SK_ndx(SK_DCRS)] = {LSA(KC_7),0x8135},               // ‡ Double Cross
+    [SK_ndx(SK_BBLT)] = {A(KC_8),0x8149},                 // • Bold Bullet
+    [SK_ndx(SK_SBLT)] = {LSA(KC_9),0x8183},               // · Small Bullet
+    [SK_ndx(SK_PARA)] = {A(KC_7),0x8182},                 // ¶
     [SK_ndx(SK_SECT)] = {A(KC_5),0x8167},                 // §
         // Number & Math symbols
     [SK_ndx(SK_PERM)] = {LSA(KC_R),0x8137},               // ‰ Per Mille
@@ -70,24 +72,24 @@ const uint16_t SemKeys_t[SK_count][OS_count] = {
     [SK_ndx(SK_APXEQ)] = {A(KC_X),0x4247},                // ≈ APPROX Equal to
     [SK_ndx(SK_OMEGA)] = {A(KC_Z),0x4234},                // Ω OMEGA
         // Currency
-    [SK_ndx(SK_EURO)] = {LSA(KC_2),0x8128},               // € 
-    [SK_ndx(SK_CENT)] = {A(KC_4),0x8162},                 // ¢ 
-    [SK_ndx(SK_BPND)] = {A(KC_3),0x8163},                 // £ 
+    [SK_ndx(SK_EURO)] = {LSA(KC_2),0x8128},               // €
+    [SK_ndx(SK_CENT)] = {A(KC_4),0x8162},                 // ¢
+    [SK_ndx(SK_BPND)] = {A(KC_3),0x8163},                 // £
     [SK_ndx(SK_JPY )] = {A(KC_Y),0x8165},                 // ¥
     [SK_ndx(SK_No  )] = {LSA(KC_SCLN),0x8470},            // № ordinal number symbol *wrong alt code*
         // Quotations
-    [SK_ndx(SK_SQUL)] = {A(KC_RBRC),0x8145},              // ’ ** Left single quote 
-    [SK_ndx(SK_SQUR)] = {LSA(KC_RBRC),0x8146},            // ’ ** Right single quote 
-    [SK_ndx(SK_SDQL)] = {A(KC_LBRC),0x8147},              // “ ** Left double quote 
-    [SK_ndx(SK_SDQR)] = {LSA(KC_LBRC),0x8148},            // ” ** Right double quote 
-    [SK_ndx(SK_FDQL)] = {A(KC_BSLS),0x8171},              // « Left double French quote 
-    [SK_ndx(SK_FDQR)] = {LSA(KC_BSLS),0x8187},            // » Right double French quote 
-    [SK_ndx(SK_FSQL)] = {LSA(KC_3),0x8139},               // ‹ Left single French quote 
-    [SK_ndx(SK_FSQR)] = {LSA(KC_4),0x8155},               // › Right single French quote 
+    [SK_ndx(SK_SQUL)] = {A(KC_RBRC),0x8145},              // ’ ** Left single quote
+    [SK_ndx(SK_SQUR)] = {LSA(KC_RBRC),0x8146},            // ’ ** Right single quote
+    [SK_ndx(SK_SDQL)] = {A(KC_LBRC),0x8147},              // “ ** Left double quote
+    [SK_ndx(SK_SDQR)] = {LSA(KC_LBRC),0x8148},            // ” ** Right double quote
+    [SK_ndx(SK_FDQL)] = {A(KC_BSLS),0x8171},              // « Left double French quote
+    [SK_ndx(SK_FDQR)] = {LSA(KC_BSLS),0x8187},            // » Right double French quote
+    [SK_ndx(SK_FSQL)] = {LSA(KC_3),0x8139},               // ‹ Left single French quote
+    [SK_ndx(SK_FSQR)] = {LSA(KC_4),0x8155},               // › Right single French quote
     [SK_ndx(SK_IQUE)] = {LSA(KC_SLASH),0x8191},           // ¿ Spanish inverted Question Mark
     [SK_ndx(SK_IEXC)] = {A(KC_1),0x8161},                 // ¡ Spanish inverted Exclamation Mark
         // Composed letters with diacritics
-    [SK_ndx(SK_ENYE)] = {A(KC_N),ALGR(KC_N)}             // ñ/Ñ 
+    [SK_ndx(SK_ENYE)] = {A(KC_N),ALGR(KC_N)}             // ñ/Ñ
 
 };
 void send_alt_code(uint16_t sk) {
@@ -122,7 +124,7 @@ void tap_SemKey(uint16_t sk) {
 
 void register_SemKey(uint16_t sk) {
     uint16_t semkeycode = get_SemKeyCode(sk);
-    
+
     if ((semkeycode & 0x8000) || (semkeycode & 0x4000)) {
         clear_keyboard();           // must have clean buffer.
         register_code(KC_LALT);     // hold Left Alt
@@ -138,7 +140,7 @@ void register_SemKey(uint16_t sk) {
 
 void unregister_SemKey(uint16_t sk) {
     uint16_t semkeycode = get_SemKeyCode(sk);
-    
+
     if ((semkeycode & 0x8000) || (semkeycode & 0x4000)) {
         // Release Alt to finish Unicode input
         unregister_code(KC_LALT);
@@ -151,7 +153,7 @@ bool process_semkey(uint16_t keycode, const keyrecord_t *record) {
     // custom processing could hapen here
     if (!(is_SemKey(keycode)))
         return true; // nothing to do. continue processing this record
-    
+
     if (record->event.pressed) {
         switch (keycode) {
 // handle multi-keystroke semkeys here
