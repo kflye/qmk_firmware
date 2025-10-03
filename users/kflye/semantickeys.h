@@ -24,8 +24,10 @@ enum sematic_keycodes {
     SK_SALL,    // select all
     SK_SWRD,    // select current word
     SK_CLOZ,    // close
+    SK_RELD,    // reload
     SK_QUIT,    // quit
     SK_NEW,     // new
+    SK_NEWTAB,  // new
     SK_OPEN,    // open
     SK_FIND,    // find
     SK_FAGN,    // find again
@@ -36,6 +38,8 @@ enum sematic_keycodes {
     SK_DELWDR,  // Delete word right of cursor
     SK_DELLNL,  // Delete line left of cursor
     SK_DELLNR,  // Delete line right of cursor
+
+
         // extended navigation
     SK_WORDPRV, // WORD LEFT
     SK_WORDNXT, // WORD RIGHT
@@ -94,12 +98,12 @@ enum sematic_keycodes {
     SK_IEXC,    // ¡ Spanish inverted Exclamation Mark
         // Composed letters with diacritics
     SK_ENYE,    // ñ/Ñ ENYE
-    
 
-    
+
+
     SK_end, // end of SemKeys
-            // 
-    
+            //
+
     NEW_SAFE_RANGE  //use "NEW_NEW_SAFE_RANGE" for keymap specific codes
 };
 
