@@ -102,17 +102,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __________________MOUSE_L4__________________, __________________MOUSE_R4__________________
     ),
 };
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _NAV, _SYM, _MEDIA);
-    state = update_tri_layer_state(state, _NAV, _NUM, _MOUSE);
-    return state;
-}
-
-
-bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
-  if (record->event.pressed) {
-  }
-  return true;
-}
-
