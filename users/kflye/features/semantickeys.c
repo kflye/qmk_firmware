@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include "semantickeys.h"
+#include "../definitions/keycodes.h"
+#include "../features/user_config.h"
 
 const uint16_t SemKeys_t[SK_count][OS_count] = {
 // Mac, Win,
@@ -92,6 +96,8 @@ const uint16_t SemKeys_t[SK_count][OS_count] = {
     [SK_ndx(SK_ENYE)] = {A(KC_N),ALGR(KC_N)}             // ñ/Ñ
 
 };
+
+#define get_SemKeyCode(sk) (SemKeys_t[SK_ndx(sk)][user_config.OSIndex])
 void send_alt_code(uint16_t sk) {
 
     if (sk & 0x8000) {

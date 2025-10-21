@@ -1,7 +1,7 @@
 #pragma once
 
-#include "kflye.h"
 
+#include QMK_KEYBOARD_H
 /*
 Since our quirky block definitions are basically a list of comma separated
 arguments, we need a wrapper in order for these definitions to be
@@ -115,8 +115,8 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 // TODO: kc_app
 
 #define ___________________FUN_R1___________________    SK_Win,            SK_Mac,            _______,           UC_PREV,           UC_NEXT,           _______
-#define ___________________FUN_R2___________________    SHRUG,             _______,           _______,           _______,           _______,           _______
-#define ___________________FUN_R3___________________    VRSN,              _______,           _______,           _______,           _______,           _______
+#define ___________________FUN_R2___________________    SHRUG,             _______,           _______,           _______,           SK_SCAP,           _______
+#define ___________________FUN_R3___________________    VRSN,              _______,           _______,           _______,           SK_SCLP,           _______
 #define ___________________FUN_R4___________________    _______,           _______,           _______,           _______,           _______,           _______
 
 #define __________________MEDIA_L1__________________    _______,           _______,           _______,           _______,           _______,           _______
@@ -125,12 +125,12 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define __________________MEDIA_L4__________________    _______,           _______,           _______,           _______,           _______,           _______
 
 #define __________________MEDIA_R1__________________    RGB_TOG,           RGB_MOD,           RGB_VAI,           RGB_SAI,           RGB_HUI ,           _______
-#define __________________MEDIA_R2__________________    U_NU,              KC_MPRV,           KC_VOLD,           KC_VOLU,           KC_MNXT ,           _______
-#define __________________MEDIA_R3__________________    OU_AUTO,           KC_MPLY,           KC_MSTP,           KC_MUTE,           U_NU    ,           _______
+#define __________________MEDIA_R2__________________    KC_NO,              KC_MPRV,           KC_VOLD,           KC_VOLU,           KC_MNXT ,           _______
+#define __________________MEDIA_R3__________________    OU_AUTO,           KC_MPLY,           KC_MSTP,           KC_MUTE,           KC_NO    ,           _______
 #define __________________MEDIA_R4__________________    _______,           _______,           _______,           _______,           _______ ,           _______
 
 
-#define ___________________NAV_L1___________________    SK_DELWDR,         _______,           SK_CLOZ,           SK_FIND,           KC_MCTL,           KC_LPAD
+#define ___________________NAV_L1___________________    SK_DELWDR,         SK_QUIT,           SK_CLOZ,           SK_FIND,           KC_MCTL,           KC_LPAD
 #define ___________________NAV_L2___________________    _______,           SK_SALL,           SK_RELD,           SK_SRCH,           SK_NEWTAB,         _______
 #define ___________________NAV_L3___________________    _______,           ________________CLIPBOARD_L________________
 #define ___________________NAV_L4___________________    _______,           _______,           _______,           _______,           _______,           _______
@@ -163,7 +163,7 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define ___________________NAV_VI_R2________________    KC_LEFT,           KC_DOWN,           KC_UP,             KC_RGHT,           CW_TOGG,           _______
 #define ___________________NAV_VI_R3________________    KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            KC_INS,            _______
 
-#define __________________MEDIA_VI_R2_______________    KC_MPRV,           KC_VOLD,           KC_VOLU,           KC_MNXT,           U_NU,              _______
+#define __________________MEDIA_VI_R2_______________    KC_MPRV,           KC_VOLD,           KC_VOLU,           KC_MNXT,           KC_NO,              _______
 
 #define __________________MOUSE_VI_R2_______________    KC_MS_L,           KC_MS_D,           KC_MS_U,           KC_MS_R,           KC_BTN2,           _______
 #define __________________MOUSE_VI_R3_______________    KC_WH_L,           KC_WH_D,           KC_WH_U,           KC_WH_R,           KC_BTN1,           _______
