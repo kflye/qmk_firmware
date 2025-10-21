@@ -16,7 +16,7 @@
      * |------+------+------+------+------+------|                             |------+------+------+------+------+------|
      * | SHFT |   z  |   x  |   c  |   v  |   b  |                             |   n  |   m  |   ,  |   .  |   /  |      |
      * +------+------+------+------+-------------+                             +-------------+------+------+------+------+
-     *                  |  ALT/ESC  |   SPC/NAV  |   GUI   |         |   GUI   |   ENT / SYM   | TAB / FUN   | 
+     *                  |  ALT/ESC  |   SPC/NAV  |   GUI   |         |   GUI   |   ENT / SYM   | TAB / FUN   |
      */
 
 #define LAYOUT_dactyl_base( \
@@ -107,5 +107,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     state = update_tri_layer_state(state, _NAV, _SYM, _MEDIA);
     state = update_tri_layer_state(state, _NAV, _NUM, _MOUSE);
     return state;
+}
+
+
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+  if (record->event.pressed) {
+  }
+  return true;
 }
 
