@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+#pragma once
 
 #include "kflye.h"
 #include <stdio.h>
@@ -121,10 +122,6 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   return rotation;
 }
 
-#define L_BASE 0
-#define L_LOWER 2
-#define L_RAISE 4
-#define L_ADJUST 8
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("Layer: "), false);
@@ -132,7 +129,9 @@ void oled_render_layer_state(void) {
         case _BASE:
           oled_write_ln_P(PSTR("_BASE: "), false);
           break;
-
+        case _QWERTY:
+          oled_write_ln_P(PSTR("_QWERTY: "), false);
+          break;
         case _SYM:
           oled_write_ln_P(PSTR("_SYM: "), false);
           break;
@@ -217,10 +216,10 @@ bool oled_task_user(void) {
     return false;
 }
 
-// bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
-//   if (record->event.pressed) {
-//     set_keylog(keycode, record);
-//   }
-//   return true;
-// }
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+  if (record->event.pressed) {
+    set_keylog(keycode, record);
+  }
+  return true;
+}
 #endif // OLED_ENABLE
