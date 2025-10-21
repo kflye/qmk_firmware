@@ -11,6 +11,7 @@
         "mousekey": true,
         "nkro": true
     },
+    "development_board": "promicro",
     "processor": "atmega32u4",
     "bootloader": "caterina",
     "usb": {
