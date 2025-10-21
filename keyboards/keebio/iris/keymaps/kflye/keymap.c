@@ -15,7 +15,7 @@ LAYOUT_iris_rev2_wrapper(\
    K200,    K201,     K202,     K203,     K204,     K205, MO(_MEDIA),  XXX,  K206,     K207,     K208,     K209,     K210,     K211,\
                                     K303,     K304,     K305,            K306,     K307,     K308\
 )
-// 36 + 8 + 12
+
 #define LAYOUT_base_wrapper(...) LAYOUT_iris_rev2_base(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -68,8 +68,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         __________________MOUSE_L4__________________, __________________MOUSE_R4__________________
     ),
 };
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _NAV, _SYM, _MEDIA);
-    return state;
-}

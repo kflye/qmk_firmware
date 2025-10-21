@@ -109,8 +109,3 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_MOUSE]   = { ENCODER_CCW_CW(KC_TRNS, KC_TRNS)}
 };  
 #endif
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _NAV, _SYM, _MEDIA);
-    return state;
-}

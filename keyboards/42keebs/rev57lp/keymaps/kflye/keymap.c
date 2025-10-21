@@ -34,12 +34,6 @@ LAYOUT_rev57lp_wrapper(\
 
 #define LAYOUT_base_wrapper(...) LAYOUT_rev57lp_base(__VA_ARGS__)
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, _NAV, _SYM, _MEDIA);
-    state = update_tri_layer_state(state, _NAV, _NUM, _MOUSE);
-    return state;
-}
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_base_wrapper(
         _________________COLEMAK_L1_________________, _________________COLEMAK_R1_________________,
